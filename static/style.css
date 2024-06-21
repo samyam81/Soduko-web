@@ -1,0 +1,68 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3e362e; 
+}
+
+#sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-template-rows: repeat(9, 40px);
+  gap: 1px;
+  margin: 20px auto; 
+  background-color: #865d36; 
+  border: 2px solid #444; 
+  padding: 10px; 
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px; /* Rounded corners */
+
+/* Styling for individual Sudoku cells */
+.sudoku-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px; /* Center content vertically */
+  background-color: #fff; /* White cell background */
+  border: 1px solid #ccc; /* Light gray border */
+}
+
+/* Styling for buttons */
+button {
+  margin: 10px 5px;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #93785b; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+button:hover {
+  background-color: #ac8968; /* Darker blue on hover */
+}
+
+button:active {
+  background-color: #a69080; /* Even darker blue when pressed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #sudoku-board {
+    grid-template-columns: repeat(9, 30px); /* Adjust cell size for smaller screens */
+    grid-template-rows: repeat(9, 30px);
+    padding: 8px; /* Smaller padding */
+  }
+  
+  .sudoku-cell {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+}
